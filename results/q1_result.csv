@@ -1,0 +1,301 @@
+order_month,rank_in_month,s_product_id,product_name,brand,category_lv1,category_lv2,avg_price,min_price,max_price,gmv,order_count
+2026-08,1,fc89c75a-ff7f-5e37-bfb2-4953226b0d27,Điều hòa chính hãng 01,NoBrand,Home Appliances,Điều hòa,450.00,360,468,2808,4
+2026-08,2,f8be6b87-7808-5469-bb5b-7b32cb5c8797,Máy giặt chính hãng A1,NoBrand,Home Appliances,Máy giặt,349.50,345,354,2262,2
+2026-08,3,63c8c029-e03b-52ff-8ee9-10692c6b46d7,Máy lọc nước sale sốc XL,NoBrand,Home Appliances,Máy lọc nước,215.57,196,258,1806,5
+2026-08,4,8d210f2a-483b-58b2-b987-5d39cc3babf1,Flycam hàng loại 1 01,NoBrand,Cameras,Flycam,864.00,864,864,1728,1
+2026-08,5,38874d3f-037d-56f9-8e2b-5115d4d79bba,Tủ lạnh sale sốc A1,NoBrand,Home Appliances,Tủ lạnh,574.00,574,574,1722,2
+2026-08,6,06a62570-65bf-57c9-91a6-cd19aa676ce1,Máy ảnh chính hãng 01,NoBrand,Cameras,Máy ảnh & ống kính,531.00,531,531,1593,1
+2026-08,7,6a93e3a9-fe38-5113-9b60-80de3991c2ce,Sunhouse Máy giặt Basic,Sunhouse,Home Appliances,Máy giặt,431.00,431,431,1479,1
+2026-08,8,7f2d2efd-6100-59ad-a5d4-cf4837324439,Logitech Smart TV Plus,Logitech,Consumer Electronics,TV,213.60,212,216,1310,2
+2026-08,9,01d7e278-b3c1-530b-a868-acd637070245,Smart TV hàng loại 1 M,NoBrand,Consumer Electronics,TV,319.00,319,319,1276,2
+2026-08,10,a163ee3d-cab7-50a2-baaa-05585930c39f,Điều hòa chính hãng M,Häfele,Home Appliances,Điều hòa,278.50,211,301,1204,2
+2026-08,11,8ae541b9-fc17-5c31-ae86-55c115a02bdf,Máy hút bụi cao cấp XL,Daikin,Home Appliances,Máy hút bụi,214.40,198,239,1195,3
+2026-08,12,9df25fdf-c20b-54ce-a4bc-eda9448a069c,Logitech Máy lọc không khí Pro,Logitech,Consumer Electronics,Máy lọc không khí,112.89,92,130,1170,8
+2026-08,13,8c0c048c-e398-5ef6-9f03-d1726de46c63,Nagakawa Loa bluetooth 2026,Nagakawa,Consumer Electronics,Loa,207.80,161,228,1140,3
+2026-08,14,29e3de1b-e192-5109-a997-a5a1b9b127c6,Tefal Tủ lạnh 2026,Tefal,Home Appliances,Tủ lạnh,306.00,272,374,1122,2
+2026-08,15,0d6c8524-ec1a-5e01-9925-87ec952c9318,Máy lọc nước sale sốc XL,NoBrand,Home Appliances,Máy lọc nước,104.00,78,112,1120,9
+2026-08,16,caa1638d-8459-5ae2-9aef-aaff821b3904,Flycam freeship L,NoBrand,Cameras,Flycam,1119.00,1119,1119,1119,1
+2026-08,17,964483dd-070a-50ab-b902-0b56100f290c,Tefal Máy giặt Basic,Tefal,Home Appliances,Máy giặt,229.50,189,270,1080,3
+2026-08,18,1909e493-cff3-5ce9-8bf7-b6ab6e812c1b,Tefal Máy hút bụi Edition,Tefal,Home Appliances,Máy hút bụi,104.22,93,119,1071,5
+2026-08,19,767c1ab7-1463-5015-a66c-2f2e0cda8dc9,Tủ lạnh chính hãng L,NoBrand,Home Appliances,Tủ lạnh,259.00,259,259,1071,1
+2026-08,20,b7c9ae2c-d4cd-5b9c-9654-85983f2fd264,Máy hút bụi freeship L,NoBrand,Home Appliances,Máy hút bụi,267.00,267,267,1068,2
+2026-08,21,014e6818-217d-5353-ad6f-73ca6379234a,Máy ảnh sale sốc XL,NoBrand,Cameras,Máy ảnh & ống kính,1063.00,1063,1063,1063,1
+2026-08,22,37ab813e-91b9-5056-a3af-2981b7bf28b5,Máy in chính hãng 03,LG,Computer & Accessories,Máy in,348.00,348,348,1044,3
+2026-08,23,52795be1-125e-5b4c-8397-1289bb159d8f,Nagakawa Nồi chiên không dầu Pro,Nagakawa,Consumer Electronics,Nồi chiên không dầu,103.56,88,115,1035,6
+2026-08,24,01e3f74f-f8ba-5451-96b6-a5571b78c370,Nagakawa Smart TV Pro,Nagakawa,Consumer Electronics,TV,872.00,872,872,1020,1
+2026-08,25,77563cc5-3ab7-51d6-a433-83791169f01a,Máy hút bụi freeship 01,Philips,Consumer Electronics,Máy hút bụi,135.83,120,167,1002,3
+2026-08,26,c814ef92-4cf7-57a8-a5f8-166a40f9cdd3,Logitech Tai nghe chụp tai Plus,Logitech,Consumer Electronics,Tai nghe,116.75,103,125,1000,5
+2026-08,27,05dfce64-66fb-5aad-aafe-71f2943ea46f,Máy hút bụi sale sốc 03,NoBrand,Consumer Electronics,Máy hút bụi,305.00,305,305,999,1
+2026-08,28,9f3f4249-5b84-515f-9158-dfc62be88745,Đồng hồ cặp đôi cao cấp M,NoBrand,Watches,Đồng hồ cặp,300.00,300,300,990,1
+2026-08,29,fbcc2ca4-13bc-5671-a741-6476c25a4afc,Smart TV freeship L,NoBrand,Consumer Electronics,TV,224.75,170,243,972,2
+2026-08,30,2bad24e2-80d8-5587-bf76-92843e824b2c,Tefal Nồi chiên không dầu Plus,Tefal,Home Appliances,Nồi chiên không dầu,84.50,70,95,950,6
+2026-08,31,27f44484-d9e4-5585-9d9d-4b4fed6b1ea5,Máy hút bụi chính hãng L,NoBrand,Home Appliances,Máy hút bụi,218.50,166,236,944,2
+2026-08,32,75bb2155-2d64-5e55-84a5-4cdae22988cf,Tefal Máy giặt Pro,Tefal,Home Appliances,Máy giặt,459.00,459,459,918,1
+2026-08,33,30bbf922-2a94-5f26-af1f-26a8d14fe1bf,Máy hút bụi chính hãng B2,Cuckoo,Home Appliances,Máy hút bụi,287.67,261,301,903,3
+2026-08,34,db06c4d7-78d6-5d2a-ac0d-683317bb2bc1,Loa bluetooth sale sốc 02,NoBrand,Consumer Electronics,Loa,32.50,26,37,888,13
+2026-08,35,5b418440-d476-559a-9089-d22c98d9e919,Logitech Smart TV Plus,Logitech,Consumer Electronics,TV,637.00,637,637,884,1
+2026-08,36,07d6d0fe-56e8-58c4-bad7-b2c8c22cda70,Lều cắm trại cao cấp B2,NoBrand,Sport & Outdoor,Đồ cắm trại,60.08,53,67,871,6
+2026-08,37,deadebeb-d33e-5be6-9646-05ae430bc2e2,Camera hành trình cao cấp XL,Imou,Cameras,Camera hành trình,120.29,98,124,868,5
+2026-08,38,9763628b-663b-566e-8815-09a223804d24,Smart TV giá rẻ B2,Sony,Consumer Electronics,TV,206.75,179,216,864,2
+2026-08,39,3fb7a65d-5f89-5c51-ad15-0e36405a6eb3,Tai nghe chụp tai sale sốc L,NoBrand,Consumer Electronics,Tai nghe,42.05,34,44,836,10
+2026-08,40,28046bd8-9874-545d-a32b-9525d6dffd39,Quạt điện hàng loại 1 03,SoundMax,Consumer Electronics,Quạt,33.27,26,38,836,15
+2026-08,41,8dfc4c3b-78aa-5a20-8328-a1faa37d94b8,Logitech Nồi chiên không dầu Plus,Logitech,Consumer Electronics,Nồi chiên không dầu,116.71,103,119,833,5
+2026-08,42,b0c73052-7d2a-5677-a790-50218ce12966,Smart TV giá rẻ 02,Xiaomi,Consumer Electronics,TV,233.33,212,276,828,2
+2026-08,43,bdce30dd-ac10-57b4-a8bf-a125b89062d6,Deli Ổ cứng SSD Edition,Deli,Computer & Accessories,Ổ cứng & USB,99.38,81,102,816,6
+2026-08,44,e1d1ccfe-421b-5f03-8808-c0cecd835b0c,Loa bluetooth giá rẻ A1,Nagakawa,Consumer Electronics,Loa,87.38,74,101,808,6
+2026-08,45,1952fd0d-c890-5ec2-a9b4-e26870e7f8b2,Máy hút bụi chính hãng M,JBL,Consumer Electronics,Máy hút bụi,268.00,268,268,804,1
+2026-08,46,3f94ceb1-aa0c-54af-a5ec-bd72165010c5,Máy hút bụi chính hãng L,Sony,Consumer Electronics,Máy hút bụi,150.20,140,157,785,2
+2026-08,47,8753c189-ec07-5a1c-bd2c-6ffd6a3b27cb,Tefal Tủ lạnh Pro,Tefal,Home Appliances,Tủ lạnh,360.50,332,389,778,2
+2026-08,48,e1bcdd1b-35e6-51de-bcd1-52be61f9f5b6,Máy giặt hàng loại 1 02,Cuckoo,Home Appliances,Máy giặt,688.00,688,688,773,1
+2026-08,49,d1b942cd-c510-57f0-b229-378e90215464,Tefal Điều hòa Pro,Tefal,Home Appliances,Điều hòa,253.00,253,253,759,1
+2026-08,50,c50e493f-a6b0-5fbf-9306-ae3f84c4a0e3,Samsung Tai nghe chụp tai Classic,Samsung,Consumer Electronics,Tai nghe,57.00,57,57,741,5
+2026-08,51,01c54fd8-eaa3-5409-a2d9-960543b8c436,Xe đạp sale sốc B2,NoBrand,Sport & Outdoor,Xe đạp & phụ kiện,179.00,179,179,716,2
+2026-08,52,c312f6e9-053d-5283-9f80-fd26fa36a4ee,Tefal Nồi chiên không dầu Basic,Tefal,Home Appliances,Nồi chiên không dầu,130.20,117,139,695,5
+2026-08,53,6e94971d-f2e9-507a-90df-f9ed4a05b4d9,Logitech Smart TV Basic,Logitech,Consumer Electronics,TV,682.00,682,682,682,1
+2026-08,54,64f63c09-65e4-52e7-b4b0-aaa7fedb1ac1,Nagakawa Máy hút bụi Classic,Nagakawa,Consumer Electronics,Máy hút bụi,317.00,317,317,634,1
+2026-08,55,dfa83410-73f4-5255-92c0-7141006eed34,Máy tính bảng giá rẻ A1,OPPO,Mobile & Gadgets,Máy tính bảng,443.00,443,443,633,1
+2026-08,56,048d870a-b5da-5392-b98c-d3867c0692bb,Nồi chiên không dầu freeship 03,NoBrand,Consumer Electronics,Nồi chiên không dầu,38.93,29,42,630,14
+2026-08,57,d7081ffb-fc8a-5bb8-989a-725fc7a82f62,Máy lọc không khí sale sốc B2,Logitech,Consumer Electronics,Máy lọc không khí,156.00,156,156,624,2
+2026-08,58,88f3752b-67cb-5439-ae72-68191de9f506,Senaro Đồng hồ cặp đôi Max,Senaro,Watches,Đồng hồ cặp,176.33,161,207,621,2
+2026-08,59,0333f1f3-27e4-524a-b662-f538ca94c1b5,Samsung Máy hút bụi Plus,Samsung,Consumer Electronics,Máy hút bụi,60.40,46,62,620,4
+2026-08,60,6bb7d921-e4b6-50f4-80de-b014bfd82780,Nagakawa Máy hút bụi Plus,Nagakawa,Consumer Electronics,Máy hút bụi,68.38,54,77,616,4
+2026-08,61,b7cd618b-139e-5661-ac14-8d5c24ca5845,Máy hút bụi freeship XL,NoBrand,Consumer Electronics,Máy hút bụi,126.25,117,154,616,2
+2026-08,62,07970cba-36c2-5401-b702-888857b52553,Samsung Tai nghe chụp tai Plus,Samsung,Consumer Electronics,Tai nghe,35.06,28,36,612,11
+2026-08,63,4541d8ca-cac1-542f-86cf-a32c56ff1c5f,Nồi chiên không dầu hàng loại 1 XL,NoBrand,Home Appliances,Nồi chiên không dầu,109.80,90,121,605,5
+2026-08,64,c4b54a85-2da5-589d-bfbc-55c726344396,Tefal Máy giặt Basic,Tefal,Home Appliances,Máy giặt,603.00,603,603,603,1
+2026-08,65,abeb64b3-2caa-5aba-a7d8-a3216f2e8613,Máy xay sinh tố giá rẻ 02,NoBrand,Home Appliances,Máy xay & ép,58.44,49,67,603,5
+2026-08,66,ca115bb7-5a08-586a-9182-eed0b60488c5,RAM máy tính hàng loại 1 01,SoundMax,Computer & Accessories,Linh kiện máy tính,91.80,91,94,595,3
+2026-08,67,0a60d5e4-45ac-5ccc-b723-5f4442c6173f,Tefal Nồi chiên không dầu Max,Tefal,Home Appliances,Nồi chiên không dầu,63.78,56,66,594,6
+2026-08,68,8345565b-a615-5bbf-8330-31e3f6f039a8,Samsung Máy hút bụi Edition,Samsung,Consumer Electronics,Máy hút bụi,94.67,87,98,588,4
+2026-08,69,22568c08-4d34-5050-ba5c-7d734a11d732,Hub USB-C giá rẻ 03,NoBrand,Computer & Accessories,Phụ kiện khác,36.53,34,39,585,7
+2026-08,70,bd240af2-0b55-5914-ab36-6c638aaed613,Tai nghe chụp tai hàng loại 1 A1,NoBrand,Consumer Electronics,Tai nghe,74.00,62,83,581,4
+2026-08,71,0f232b82-1532-56c0-a0bd-4d7869e278bf,Logitech Máy lọc không khí Mini,Logitech,Consumer Electronics,Máy lọc không khí,288.00,288,288,576,2
+2026-08,72,de2a9a4a-93e7-544c-a26c-344f0d4cd731,Áo nữ chính hãng 03,NoBrand,Women Clothes,Áo,10.83,8,12,576,33
+2026-08,73,ab4f155f-4199-5954-ba66-863eab23e6b7,Máy hút bụi sale sốc A1,NoBrand,Consumer Electronics,Máy hút bụi,71.71,65,82,574,4
+2026-08,74,32e57804-a8d7-5521-9e9f-f4f3ebe9c308,Áo khoác nữ cao cấp 03,NoBrand,Women Clothes,Áo khoác,41.92,37,44,572,7
+2026-08,75,11943709-67c8-5041-8120-a82ed78d7be3,Camera hành trình chính hãng B2,Mercusys,Cameras,Camera hành trình,42.77,31,44,572,9
+2026-08,76,7240f5c9-8005-56b8-aab9-fdaabc21eeb1,Xe đẩy em bé sale sốc 01,NoBrand,"Moms, Kids & Babies",Xe đẩy & ghế ngồi,170.00,170,170,570,1
+2026-08,77,970625f1-c3a3-5f9d-a775-3aa70533220b,Quần nữ freeship 03,NoBrand,Women Clothes,Quần,18.48,15,21,567,19
+2026-08,78,29a6d8fb-f360-5a40-8e2f-4c872514efc8,Logitech Bàn ủi hơi nước 2026,Logitech,Consumer Electronics,Bàn ủi,25.57,21,27,567,11
+2026-08,79,e4db0e39-4f4b-5c82-a5c5-df100f986ceb,Quạt điện freeship 02,NoBrand,Consumer Electronics,Quạt,80.00,80,80,560,4
+2026-08,80,d7160e44-a08f-5404-959b-9fe664d163c6,Bộ đồ nam chính hãng L,ON OFF,Men Clothes,Đồ bộ,15.17,12,16,560,21
+2026-08,81,1f22a748-35a3-5ed8-8512-93150d841bcc,Gaabor Máy lọc nước Edition,Gaabor,Home Appliances,Máy lọc nước,129.75,102,139,556,2
+2026-08,82,eb077f29-d421-5412-807b-2679371e9487,Nồi cơm điện giá rẻ L,NoBrand,Home Appliances,Nồi cơm điện,129.50,121,138,552,3
+2026-08,83,21ef4d91-5f09-51d2-80ef-54d51123cc03,RAM máy tính freeship 01,NoBrand,Computer & Accessories,Linh kiện máy tính,92.00,92,92,552,3
+2026-08,84,234d0df1-e523-57cb-9a24-384c76102c55,Máy lọc nước chính hãng XL,NoBrand,Home Appliances,Máy lọc nước,274.00,274,274,548,1
+2026-08,85,af9d47eb-5128-50f6-bad6-06394b50038b,Logitech Loa bluetooth Max,Logitech,Consumer Electronics,Loa,18.00,14,21,546,21
+2026-08,86,a471ede1-1823-5ecc-8952-9f62f1596953,Tefal Máy lọc nước Basic,Tefal,Home Appliances,Máy lọc nước,103.20,80,109,545,3
+2026-08,87,9b08d168-4aae-5e15-b36b-42b8383ae76b,Máy hút bụi giá rẻ XL,NoBrand,Consumer Electronics,Máy hút bụi,64.63,53,68,544,6
+2026-08,88,3e387020-adf7-56de-af51-621ac9e5c4e3,Máy giặt hàng loại 1 01,Daikin,Home Appliances,Máy giặt,268.00,268,268,536,2
+2026-08,89,24dfb721-6772-534d-9375-9c3d1e2dbea9,Deli Laptop Edition,Deli,Computer & Accessories,Laptop,533.00,533,533,533,1
+2026-08,90,fdaa3016-5e1b-56bd-810e-88374a78944a,Deli Router wifi Max,Deli,Computer & Accessories,Router & mạng,101.80,85,106,530,3
+2026-08,91,3e2fc4c7-bdda-5b09-89cb-97d4c7b88a5d,Tefal Máy hút bụi 2026,Tefal,Home Appliances,Máy hút bụi,86.00,76,91,530,4
+2026-08,92,30cf0e6e-ab22-5ee3-82d0-06f5efa786b5,Đồng hồ nam giá rẻ 02,Baby-G,Watches,Đồng hồ nam,132.00,132,132,528,2
+2026-08,93,7c03612d-15d8-5b9e-9123-7523a9ddbfc7,Nồi chiên không dầu cao cấp L,Comet,Consumer Electronics,Nồi chiên không dầu,83.67,68,88,528,5
+2026-08,94,fe792dc3-7855-521c-a223-f867b2f024f3,Camera an ninh wifi chính hãng 02,NoBrand,Cameras,Camera an ninh,79.33,75,87,522,4
+2026-08,95,2a70bb79-c286-58d1-abbe-d4213093341b,Máy lọc không khí giá rẻ 02,NoBrand,Consumer Electronics,Máy lọc không khí,158.00,126,174,522,2
+2026-08,96,59ac8f03-baa5-50d1-8940-6ad685255b79,Nagakawa Quạt điện Mini,Nagakawa,Consumer Electronics,Quạt,33.50,26,37,518,8
+2026-08,97,1d0d484d-ac15-5135-a6d5-f4579f0c0502,Máy lọc không khí sale sốc A1,NoBrand,Consumer Electronics,Máy lọc không khí,221.00,219,223,514,2
+2026-08,98,a892bde7-5255-5100-8b19-1b715ff8990f,Chuột không dây cao cấp XL,Razer,Computer & Accessories,Chuột,55.56,44,57,513,6
+2026-08,99,18bb4eb2-14eb-5cc2-9e1d-d8fa78c0c962,Quần jeans nam freeship XL,NoBrand,Men Clothes,Quần jeans,28.47,24,34,510,9
+2026-08,100,c6c7e05e-576c-58fb-8b1f-98781023dcf0,Logitech Nồi chiên không dầu 2026,Logitech,Consumer Electronics,Nồi chiên không dầu,50.30,44,51,510,6
+2026-09,1,fbcc2ca4-13bc-5671-a741-6476c25a4afc,Smart TV freeship L,NoBrand,Consumer Electronics,TV,202.71,175,225,1701,4
+2026-09,2,2798b963-ee8b-58e8-b57d-0b25b2c4b0f2,Flycam giá rẻ A1,NoBrand,Cameras,Flycam,399.00,399,399,1596,3
+2026-09,3,99b89fc1-eb5b-5644-9ea3-6969ead49cf3,Nagakawa Máy lọc không khí 2026,Nagakawa,Consumer Electronics,Máy lọc không khí,262.20,230,300,1500,5
+2026-09,4,41680011-44e6-5340-81a0-bc289be1990d,Nồi chiên không dầu hàng loại 1 A1,NoBrand,Consumer Electronics,Nồi chiên không dầu,115.67,94,122,1464,7
+2026-09,5,0ad2b9b5-224b-54b3-9c90-d2c2223cead6,Máy lọc nước giá rẻ L,Comet,Home Appliances,Máy lọc nước,300.25,272,351,1404,3
+2026-09,6,cbf7a374-3778-5960-92bf-5085798710f4,Máy lọc không khí hàng loại 1 M,NoBrand,Consumer Electronics,Máy lọc không khí,271.50,246,348,1392,2
+2026-09,7,5ad6cb10-5185-59f0-acfc-f7b9403edc12,Máy giặt hàng loại 1 03,NoBrand,Home Appliances,Máy giặt,663.00,663,663,1326,1
+2026-09,8,c4b54a85-2da5-589d-bfbc-55c726344396,Tefal Máy giặt Basic,Tefal,Home Appliances,Máy giặt,603.00,603,603,1206,1
+2026-09,9,27f44484-d9e4-5585-9d9d-4b4fed6b1ea5,Máy hút bụi chính hãng L,NoBrand,Home Appliances,Máy hút bụi,209.00,191,236,1180,2
+2026-09,10,8753c189-ec07-5a1c-bd2c-6ffd6a3b27cb,Tefal Tủ lạnh Pro,Tefal,Home Appliances,Tủ lạnh,357.33,294,389,1167,3
+2026-09,11,2f2ec56d-77ea-5a2d-a26a-71b4fe866dce,Máy hút bụi chính hãng M,LG,Home Appliances,Máy hút bụi,383.00,383,383,1149,1
+2026-09,12,a9370770-4805-5265-bcba-9d091a46470e,Tefal Bếp từ Pro,Tefal,Home Appliances,Bếp & dụng cụ nấu,117.44,98,125,1125,6
+2026-09,13,964483dd-070a-50ab-b902-0b56100f290c,Tefal Máy giặt Basic,Tefal,Home Appliances,Máy giặt,243.00,196,270,1080,3
+2026-09,14,3e387020-adf7-56de-af51-621ac9e5c4e3,Máy giặt hàng loại 1 01,Daikin,Home Appliances,Máy giặt,230.50,214,268,1072,3
+2026-09,15,f6136b55-8e14-5ffd-9bbd-b0db2cf790ea,Smart TV hàng loại 1 M,NoBrand,Consumer Electronics,TV,992.00,992,992,992,1
+2026-09,16,f323cfc8-95a4-509e-8cee-126d8cf9d602,Tefal Máy hút bụi Basic,Tefal,Home Appliances,Máy hút bụi,111.38,98,124,992,6
+2026-09,17,fca54fad-0650-5095-b6fe-abb5940afeee,Điều hòa chính hãng L,NoBrand,Home Appliances,Điều hòa,492.00,492,492,984,1
+2026-09,18,ea2bc9f2-1f4d-5bca-ab93-2457b0b20065,Deli Màn hình máy tính Basic,Deli,Computer & Accessories,Màn hình,146.50,131,159,954,4
+2026-09,19,7c23006e-21ec-5830-a3d9-2f9755f67392,Ugreen Máy in Plus,Ugreen,Computer & Accessories,Máy in,305.00,305,305,915,1
+2026-09,20,097da170-0e3f-5492-99fb-88f85ba526bb,Logitech Máy hút bụi Plus,Logitech,Consumer Electronics,Máy hút bụi,79.70,70,90,900,5
+2026-09,21,e620179e-db36-5b3b-bcdc-de097e3914d7,Smart TV hàng loại 1 M,NoBrand,Consumer Electronics,TV,858.00,858,858,858,1
+2026-09,22,336b3036-690c-529a-a0e6-ed9f8d803584,Samsung Smart TV Plus,Samsung,Consumer Electronics,TV,854.00,854,854,854,1
+2026-09,23,d3173396-8f9d-5576-85ba-16892255a255,Nagakawa Smart TV Pro,Nagakawa,Consumer Electronics,TV,283.00,283,283,849,2
+2026-09,24,e018cd15-e095-5e05-83e4-212fdce2343f,Ổ cứng SSD hàng loại 1 A1,NoBrand,Computer & Accessories,Ổ cứng & USB,105.14,93,120,840,3
+2026-09,25,c4c7e664-1be7-51b3-b74f-6483f2b17c41,Nồi chiên không dầu sale sốc 01,NoBrand,Consumer Electronics,Nồi chiên không dầu,60.77,47,64,832,10
+2026-09,26,eb077f29-d421-5412-807b-2679371e9487,Nồi cơm điện giá rẻ L,NoBrand,Home Appliances,Nồi cơm điện,132.17,103,138,828,5
+2026-09,27,47a940b6-162f-567d-bd4e-80e6cc347e35,Tefal Máy lọc nước Mini,Tefal,Home Appliances,Máy lọc nước,272.00,272,272,816,1
+2026-09,28,eb68be60-0e0d-53f5-9bbd-c4e576e99828,Deli Laptop Classic,Deli,Computer & Accessories,Laptop,776.00,776,776,776,1
+2026-09,29,d1b942cd-c510-57f0-b229-378e90215464,Tefal Điều hòa Pro,Tefal,Home Appliances,Điều hòa,253.00,253,253,759,1
+2026-09,30,f8be6b87-7808-5469-bb5b-7b32cb5c8797,Máy giặt chính hãng A1,NoBrand,Home Appliances,Máy giặt,273.00,273,273,754,1
+2026-09,31,879dc8f1-61bc-59a4-93c0-fe918b77383e,Nagakawa Nồi chiên không dầu Pro,Nagakawa,Consumer Electronics,Nồi chiên không dầu,126.60,111,150,750,3
+2026-09,32,07d6d0fe-56e8-58c4-bad7-b2c8c22cda70,Lều cắm trại cao cấp B2,NoBrand,Sport & Outdoor,Đồ cắm trại,59.45,48,67,737,7
+2026-09,33,59079d3b-a1a1-5006-9a2a-bacf55379a57,Quạt điện freeship B2,Bose,Consumer Electronics,Quạt,38.24,33,43,731,11
+2026-09,34,e4db0e39-4f4b-5c82-a5c5-df100f986ceb,Quạt điện freeship 02,NoBrand,Consumer Electronics,Quạt,75.11,69,80,720,5
+2026-09,35,8ae541b9-fc17-5c31-ae86-55c115a02bdf,Máy hút bụi cao cấp XL,Daikin,Home Appliances,Máy hút bụi,239.00,239,239,717,2
+2026-09,36,eb80101e-a6d5-5c04-8a36-6f2a88991600,Bàn ủi hơi nước hàng loại 1 02,NoBrand,Consumer Electronics,Bàn ủi,52.15,42,54,702,10
+2026-09,37,651842e4-0519-5181-b13a-596a77aa8c77,Bếp từ cao cấp 01,NoBrand,Home Appliances,Bếp & dụng cụ nấu,74.11,70,76,684,4
+2026-09,38,a33cbb2f-2ae2-5ac1-8b66-1d7960eb75b7,Logitech Loa bluetooth Mini,Logitech,Consumer Electronics,Loa,170.00,170,170,680,4
+2026-09,39,eb066e33-43a7-5afd-a0d8-f35c61d7aa35,Đầm nữ chính hãng L,NoBrand,Women Clothes,Váy & đầm,53.33,42,56,672,7
+2026-09,40,77563cc5-3ab7-51d6-a433-83791169f01a,Máy hút bụi freeship 01,Philips,Consumer Electronics,Máy hút bụi,162.75,150,167,668,3
+2026-09,41,bd240af2-0b55-5914-ab36-6c638aaed613,Tai nghe chụp tai hàng loại 1 A1,NoBrand,Consumer Electronics,Tai nghe,75.50,71,83,664,4
+2026-09,42,db41481a-de5d-5466-9c83-3034665b679e,Xe đẩy em bé freeship L,Moony,"Moms, Kids & Babies",Xe đẩy & ghế ngồi,91.17,83,110,660,4
+2026-09,43,f063631d-0cba-5302-b04b-9d85550a11e3,Tủ lạnh giá rẻ A1,NoBrand,Home Appliances,Tủ lạnh,657.00,657,657,657,1
+2026-09,44,e4caaf8c-3e69-5361-b869-a77376e21fd0,Nồi chiên không dầu sale sốc 03,NoBrand,Home Appliances,Nồi chiên không dầu,84.86,78,93,651,4
+2026-09,45,79baf308-7267-5e14-9ada-4c63560ae424,Samsung Nồi chiên không dầu Classic,Samsung,Consumer Electronics,Nồi chiên không dầu,122.20,95,129,645,4
+2026-09,46,b81323b8-f106-58ba-8b6d-0570f092b46d,Bàn ủi hơi nước freeship XL,NoBrand,Consumer Electronics,Bàn ủi,40.80,30,43,645,9
+2026-09,47,24a9f907-8792-5fc7-9627-58f1b410d7e1,Máy hút bụi cao cấp 01,NoBrand,Consumer Electronics,Máy hút bụi,91.14,86,92,644,3
+2026-09,48,3f94ceb1-aa0c-54af-a5ec-bd72165010c5,Máy hút bụi chính hãng L,Sony,Consumer Electronics,Máy hút bụi,152.25,138,157,628,4
+2026-09,49,47c3dcbb-9032-5fd2-abc2-508b1ea209dd,Smart TV sale sốc 03,NoBrand,Consumer Electronics,TV,620.00,620,620,620,1
+2026-09,50,f9247748-a4a3-5917-8cb3-fa57e7e3cda9,Laptop hàng loại 1 M,SoundMax,Computer & Accessories,Laptop,438.00,438,438,610,1
+2026-09,51,08538b0a-a29d-5c00-8bad-fda082abf640,Tefal Máy lọc nước Basic,Tefal,Home Appliances,Máy lọc nước,94.50,76,101,606,6
+2026-09,52,a163ee3d-cab7-50a2-baaa-05585930c39f,Điều hòa chính hãng M,Häfele,Home Appliances,Điều hòa,231.00,228,234,602,2
+2026-09,53,8dfc4c3b-78aa-5a20-8328-a1faa37d94b8,Logitech Nồi chiên không dầu Plus,Logitech,Consumer Electronics,Nồi chiên không dầu,119.00,119,119,595,3
+2026-09,54,db06c4d7-78d6-5d2a-ac0d-683317bb2bc1,Loa bluetooth sale sốc 02,NoBrand,Consumer Electronics,Loa,33.94,26,37,592,12
+2026-09,55,e7e43233-ce41-50a4-a5b1-641aee70d6ad,Nagakawa Smart TV Plus,Nagakawa,Consumer Electronics,TV,283.00,270,296,592,2
+2026-09,56,8345565b-a615-5bbf-8330-31e3f6f039a8,Samsung Máy hút bụi Edition,Samsung,Consumer Electronics,Máy hút bụi,94.17,83,98,588,4
+2026-09,57,cb0cc0bd-0540-5ea1-8319-040043ab43ad,Logitech Quạt điện Classic,Logitech,Consumer Electronics,Quạt,23.30,17,25,575,15
+2026-09,58,38874d3f-037d-56f9-8e2b-5115d4d79bba,Tủ lạnh sale sốc A1,NoBrand,Home Appliances,Tủ lạnh,574.00,574,574,574,1
+2026-09,59,ab4f155f-4199-5954-ba66-863eab23e6b7,Máy hút bụi sale sốc A1,NoBrand,Consumer Electronics,Máy hút bụi,79.14,62,82,574,4
+2026-09,60,24e4131e-62a8-5869-a6d2-299cff38d3d7,Lều cắm trại sale sốc A1,OneTwoFit,Sport & Outdoor,Đồ cắm trại,18.85,16,21,567,15
+2026-09,61,0d6c8524-ec1a-5e01-9925-87ec952c9318,Máy lọc nước sale sốc XL,NoBrand,Home Appliances,Máy lọc nước,104.40,95,112,560,5
+2026-09,62,68a63ca0-c75b-5493-a759-3e8a96ff9a20,Logitech Bàn ủi hơi nước Mini,Logitech,Consumer Electronics,Bàn ủi,42.31,34,43,559,9
+2026-09,63,e487fb89-05f9-5edf-98c4-8b7333d0725e,Đồ ngủ nữ hàng loại 1 XL,Bemine,Women Clothes,Đồ ngủ,22.70,17,24,552,17
+2026-09,64,b0904d65-e8ce-52f4-973a-99c4ba9f8a15,Nagakawa Loa bluetooth Basic,Nagakawa,Consumer Electronics,Loa,100.80,83,110,550,5
+2026-09,65,ffd08b13-b9f5-5ed5-b1b6-5bdbbc5943f4,Bếp từ hàng loại 1 01,NoBrand,Home Appliances,Bếp & dụng cụ nấu,119.00,113,137,548,2
+2026-09,66,dc5791aa-8149-535b-9732-9d224de37479,Nồi chiên không dầu cao cấp L,Tronsmart,Consumer Electronics,Nồi chiên không dầu,119.75,107,124,544,2
+2026-09,67,b3be0457-0e4e-594d-a2a1-039c7f947bc9,Nồi cơm điện sale sốc XL,NoBrand,Home Appliances,Nồi cơm điện,97.60,82,108,540,5
+2026-09,68,29a6d8fb-f360-5a40-8e2f-4c872514efc8,Logitech Bàn ủi hơi nước 2026,Logitech,Consumer Electronics,Bàn ủi,25.05,19,27,540,12
+2026-09,69,978f362b-6046-5aeb-ab96-e99f2ad4ec55,Quần nữ cao cấp B2,NoBrand,Women Clothes,Quần,10.12,7,11,539,27
+2026-09,70,a616b7a9-91c7-556e-a879-7ebb6ac24a8d,Logitech Máy hút bụi Mini,Logitech,Consumer Electronics,Máy hút bụi,89.00,89,89,534,3
+2026-09,71,775f9d18-ad73-520b-a343-c1f34620b814,Tefal Nồi cơm điện Basic,Tefal,Home Appliances,Nồi cơm điện,38.92,29,41,533,10
+2026-09,72,700c70a8-c9e0-512b-bc3f-199793185325,Tủ lạnh hàng loại 1 M,Dreame,Home Appliances,Tủ lạnh,530.00,530,530,530,1
+2026-09,73,76288b8c-30b0-5a48-99a1-f790284f2b0b,Vali kéo giá rẻ A1,BG,Sport & Outdoor,Vali & balo,62.13,48,66,528,5
+2026-09,74,0a60d5e4-45ac-5ccc-b723-5f4442c6173f,Tefal Nồi chiên không dầu Max,Tefal,Home Appliances,Nồi chiên không dầu,64.50,54,66,528,4
+2026-09,75,3fb7a65d-5f89-5c51-ad15-0e36405a6eb3,Tai nghe chụp tai sale sốc L,NoBrand,Consumer Electronics,Tai nghe,39.75,31,44,528,7
+2026-09,76,afe30b63-2258-5ac2-8bd6-90f215d14bf5,Màn hình máy tính hàng loại 1 L,NoBrand,Computer & Accessories,Màn hình,261.00,261,261,522,2
+2026-09,77,747c4790-7d28-564c-bdc2-526b6a1f5f24,Bếp từ sale sốc B2,NoBrand,Home Appliances,Bếp & dụng cụ nấu,155.00,146,173,519,2
+2026-09,78,bc5dd4f0-6f11-55f4-bfc5-bd1e366e4b96,Quạt điện hàng loại 1 M,NoBrand,Consumer Electronics,Quạt,34.64,25,37,518,10
+2026-09,79,61a61205-5eaf-57e5-b917-b851e64f1b71,Nồi cơm điện sale sốc 01,Gaabor,Home Appliances,Nồi cơm điện,22.58,19,27,513,13
+2026-09,80,c6c7e05e-576c-58fb-8b1f-98781023dcf0,Logitech Nồi chiên không dầu 2026,Logitech,Consumer Electronics,Nồi chiên không dầu,45.70,38,51,510,8
+2026-09,81,d8f9ddcd-26f8-5a61-8629-4d34d4edb915,Máy in sale sốc 01,Samsung,Computer & Accessories,Máy in,112.50,98,127,508,2
+2026-09,82,72c90f11-5792-5f8a-a1b3-65c811aed36e,Router wifi cao cấp L,NoBrand,Computer & Accessories,Router & mạng,101.00,101,101,505,2
+2026-09,83,b64cace0-aa0e-54b2-ac91-18ed30488758,Nồi chiên không dầu sale sốc 01,NoBrand,Home Appliances,Nồi chiên không dầu,67.71,54,72,504,5
+2026-09,84,77f339a8-e74b-5ce2-9149-d29d01093947,Canifa Áo sơ mi công sở nữ Pro,Canifa,Women Clothes,Đồ công sở,26.11,20,28,504,13
+2026-09,85,e6ee3c04-5356-5c8e-9089-4f86c966613d,Máy hút bụi cao cấp A1,NoBrand,Consumer Electronics,Máy hút bụi,59.75,50,63,504,4
+2026-09,86,c814ef92-4cf7-57a8-a5f8-166a40f9cdd3,Logitech Tai nghe chụp tai Plus,Logitech,Consumer Electronics,Tai nghe,125.00,125,125,500,2
+2026-09,87,8dc463e8-b23e-574e-b9fe-c263a898a666,Nagakawa Tai nghe chụp tai Pro,Nagakawa,Consumer Electronics,Tai nghe,125.00,125,125,500,3
+2026-09,88,a51bdff0-2883-556c-9779-8b6f91e3565d,Canifa Áo nữ 2026,Canifa,Women Clothes,Áo,14.71,11,16,496,23
+2026-09,89,47b970c3-80ca-53e5-9e64-666cdb1fe6aa,Canifa Áo khoác nữ Mini,Canifa,Women Clothes,Áo khoác,13.77,11,16,496,20
+2026-09,90,c6f1cc91-9077-50b0-a02a-a64efaf7b28f,Camera hành trình hàng loại 1 M,NoBrand,Cameras,Camera hành trình,41.80,36,49,490,4
+2026-09,91,35a4ff04-a784-550b-a76e-bf46f862134a,Áo khoác nữ hàng loại 1 03,NoBrand,Women Clothes,Áo khoác,48.10,43,49,490,7
+2026-09,92,9f140e79-7563-5f30-a60e-4f7754e928cf,Deli RAM máy tính Edition,Deli,Computer & Accessories,Linh kiện máy tính,81.00,81,81,486,4
+2026-09,93,a0f8cdcc-189b-5f76-aab6-9e6dd0bed8de,Tefal Bếp từ Plus,Tefal,Home Appliances,Bếp & dụng cụ nấu,51.56,42,54,486,7
+2026-09,94,937d4436-8060-553e-ad64-1493c583025f,Samsung Bàn ủi hơi nước Pro,Samsung,Consumer Electronics,Bàn ủi,24.89,19,27,486,12
+2026-09,95,f814cc14-d807-57cb-bf37-078c8be8b22e,Logitech Quạt điện Classic,Logitech,Consumer Electronics,Quạt,81.00,81,81,486,4
+2026-09,96,ce8f4b59-2ed3-5f17-8460-5f985f524f5d,Ổ cứng SSD sale sốc A1,NoBrand,Computer & Accessories,Ổ cứng & USB,83.00,69,97,485,4
+2026-09,97,4e526968-a28b-5815-b0cb-d768a5e1a824,Giày chạy bộ chính hãng 03,NoBrand,Sport & Outdoor,Giày thể thao,88.50,88,90,484,2
+2026-09,98,7b6253c4-117c-5be7-86af-d1a093fae343,Canifa Đầm nữ Mini,Canifa,Women Clothes,Váy & đầm,21.43,17,23,483,12
+2026-09,99,6805a430-33ad-5833-bb34-9f5f7ead41e1,Nagakawa Loa bluetooth Classic,Nagakawa,Consumer Electronics,Loa,29.27,22,32,480,9
+2026-09,100,725515ab-52a0-5288-bf3c-cd244227af79,Tefal Máy xay sinh tố Pro,Tefal,Home Appliances,Máy xay & ép,25.29,20,28,476,13
+2026-10,1,9cb5ce69-0ff4-5898-a52e-430403a03b24,Laptop cao cấp 02,Western Digital,Computer & Accessories,Laptop,794.00,794,794,2382,1
+2026-10,2,234d0df1-e523-57cb-9a24-384c76102c55,Máy lọc nước chính hãng XL,NoBrand,Home Appliances,Máy lọc nước,256.50,224,274,2192,4
+2026-10,3,5d4d8f31-2e8f-58fa-927e-741692a4cc04,Tefal Điều hòa Pro,Tefal,Home Appliances,Điều hòa,286.83,235,312,1872,3
+2026-10,4,e9fc1b0a-c881-5625-8b2d-10af9eda78d3,Samsung Smart TV Edition,Samsung,Consumer Electronics,TV,330.60,274,364,1820,3
+2026-10,5,5b418440-d476-559a-9089-d22c98d9e919,Logitech Smart TV Plus,Logitech,Consumer Electronics,TV,884.00,884,884,1768,2
+2026-10,6,336b3036-690c-529a-a0e6-ed9f8d803584,Samsung Smart TV Plus,Samsung,Consumer Electronics,TV,737.00,620,854,1708,2
+2026-10,7,79ed3edd-5af0-5fbe-97b0-b8c2f0f1745e,Điều hòa freeship XL,NoBrand,Home Appliances,Điều hòa,259.33,213,276,1656,4
+2026-10,8,bc5dd4f0-6f11-55f4-bfc5-bd1e366e4b96,Quạt điện hàng loại 1 M,NoBrand,Consumer Electronics,Quạt,35.08,26,37,1443,24
+2026-10,9,95c36c5f-9542-564f-96b5-93b18fa6fa19,Smart TV chính hãng XL,Coocaa,Consumer Electronics,TV,478.00,478,478,1434,1
+2026-10,10,4541d8ca-cac1-542f-86cf-a32c56ff1c5f,Nồi chiên không dầu hàng loại 1 XL,NoBrand,Home Appliances,Nồi chiên không dầu,103.18,91,121,1331,5
+2026-10,11,9df25fdf-c20b-54ce-a4bc-eda9448a069c,Logitech Máy lọc không khí Pro,Logitech,Consumer Electronics,Máy lọc không khí,109.30,91,130,1300,6
+2026-10,12,3f94ceb1-aa0c-54af-a5ec-bd72165010c5,Máy hút bụi chính hãng L,Sony,Consumer Electronics,Máy hút bụi,149.63,120,157,1256,5
+2026-10,13,ad2c3993-b074-5a0d-961b-9baac4fed05b,Tefal Tủ lạnh Plus,Tefal,Home Appliances,Tủ lạnh,414.00,414,414,1242,1
+2026-10,14,49fe6d42-1195-5a84-bf21-62eaec0c22d5,Máy lọc nước cao cấp XL,Panasonic,Home Appliances,Máy lọc nước,286.25,218,309,1236,3
+2026-10,15,fbcc2ca4-13bc-5671-a741-6476c25a4afc,Smart TV freeship L,NoBrand,Consumer Electronics,TV,243.00,243,243,1215,2
+2026-10,16,24fb6b2a-14b6-564c-9b71-1c9c8696dd1f,Xe đạp hàng loại 1 02,NoBrand,Sport & Outdoor,Xe đạp & phụ kiện,316.00,316,316,1188,1
+2026-10,17,6a5a6ede-3a1d-5873-9ddd-bf777764990f,Samsung Máy lọc không khí Plus,Samsung,Consumer Electronics,Máy lọc không khí,391.00,391,391,1173,2
+2026-10,18,4bfd29e6-ce98-5c37-b555-76a94ce0f560,Tefal Điều hòa Mini,Tefal,Home Appliances,Điều hòa,377.00,377,377,1131,1
+2026-10,19,6bac4f22-2db7-51df-9bfd-1aa543bd73ae,Xe đạp hàng loại 1 L,NoBrand,Sport & Outdoor,Xe đạp & phụ kiện,367.00,367,367,1101,1
+2026-10,20,81c04e7f-dde5-5fae-849f-dd0bc06f1032,Máy lọc không khí freeship B2,NoBrand,Consumer Electronics,Máy lọc không khí,362.00,362,362,1086,1
+2026-10,21,3e387020-adf7-56de-af51-621ac9e5c4e3,Máy giặt hàng loại 1 01,Daikin,Home Appliances,Máy giặt,248.00,188,268,1072,2
+2026-10,22,7f2d2efd-6100-59ad-a5d4-cf4837324439,Logitech Smart TV Plus,Logitech,Consumer Electronics,TV,262.00,262,262,1048,2
+2026-10,23,37ab813e-91b9-5056-a3af-2981b7bf28b5,Máy in chính hãng 03,LG,Computer & Accessories,Máy in,309.00,309,309,1044,1
+2026-10,24,db09ae49-ceaf-5bc0-bb3b-2400c5f230d3,Máy in giá rẻ 02,Tenda,Computer & Accessories,Máy in,331.67,301,347,1041,3
+2026-10,25,b00ae2ff-5752-5091-b53f-b3f82a5bf335,Deli Máy in Edition,Deli,Computer & Accessories,Máy in,344.00,344,344,1032,1
+2026-10,26,c154fbe0-2526-5a97-90e4-70dc2d60380c,Smart TV cao cấp XL,NoBrand,Consumer Electronics,TV,257.00,257,257,1028,2
+2026-10,27,77563cc5-3ab7-51d6-a433-83791169f01a,Máy hút bụi freeship 01,Philips,Consumer Electronics,Máy hút bụi,145.33,126,167,1002,4
+2026-10,28,9b08d168-4aae-5e15-b36b-42b8383ae76b,Máy hút bụi giá rẻ XL,NoBrand,Consumer Electronics,Máy hút bụi,62.29,48,68,952,9
+2026-10,29,8dfc4c3b-78aa-5a20-8328-a1faa37d94b8,Logitech Nồi chiên không dầu Plus,Logitech,Consumer Electronics,Nồi chiên không dầu,106.75,90,119,952,5
+2026-10,30,e4caaf8c-3e69-5361-b869-a77376e21fd0,Nồi chiên không dầu sale sốc 03,NoBrand,Home Appliances,Nồi chiên không dầu,81.90,69,93,930,8
+2026-10,31,940368dd-7b23-5d7e-a553-4a6c7d19e902,Deli Màn hình máy tính Mini,Deli,Computer & Accessories,Màn hình,306.00,306,306,918,1
+2026-10,32,b9cdcbb4-b424-5c53-a17a-ba4915e4d64c,Sony Máy ảnh Edition,Sony,Cameras,Máy ảnh & ống kính,358.00,358,358,914,1
+2026-10,33,8c0c048c-e398-5ef6-9f03-d1726de46c63,Nagakawa Loa bluetooth 2026,Nagakawa,Consumer Electronics,Loa,211.50,206,228,912,2
+2026-10,34,99b89fc1-eb5b-5644-9ea3-6969ead49cf3,Nagakawa Máy lọc không khí 2026,Nagakawa,Consumer Electronics,Máy lọc không khí,300.00,300,300,900,1
+2026-10,35,5cf21b0a-af61-5104-9d33-d662ac26133c,DJI Máy ảnh Edition,DJI,Cameras,Máy ảnh & ống kính,895.00,895,895,895,1
+2026-10,36,7959c49e-a3f3-5f20-ab59-a9b62b752aec,Flycam sale sốc XL,NoBrand,Cameras,Flycam,749.00,749,749,879,1
+2026-10,37,747c4790-7d28-564c-bdc2-526b6a1f5f24,Bếp từ sale sốc B2,NoBrand,Home Appliances,Bếp & dụng cụ nấu,169.40,155,173,865,3
+2026-10,38,68bb7d6f-f2c8-51c1-9492-8e14ef5b3192,Tủ lạnh hàng loại 1 01,NoBrand,Home Appliances,Tủ lạnh,770.00,770,770,864,1
+2026-10,39,ea7d911d-6112-57b1-80aa-9faaf2e1816c,Tai nghe chụp tai freeship 01,Bose,Consumer Electronics,Tai nghe,136.00,128,144,864,2
+2026-10,40,da721073-fa8e-5dc3-afb4-ed9ea0f91b4c,Samsung Loa bluetooth Basic,Samsung,Consumer Electronics,Loa,183.25,173,214,856,2
+2026-10,41,763fe0fd-03bd-5317-ab83-ad77d322d0a2,Loa bluetooth hàng loại 1 M,NoBrand,Consumer Electronics,Loa,58.69,47,65,845,11
+2026-10,42,c312f6e9-053d-5283-9f80-fd26fa36a4ee,Tefal Nồi chiên không dầu Basic,Tefal,Home Appliances,Nồi chiên không dầu,129.33,112,139,834,5
+2026-10,43,7f0dd0a0-bd24-5e50-a97d-af97ef673b99,Xiaomi Điều hòa Pro,Xiaomi,Home Appliances,Điều hòa,416.00,416,416,832,1
+2026-10,44,bd240af2-0b55-5914-ab36-6c638aaed613,Tai nghe chụp tai hàng loại 1 A1,NoBrand,Consumer Electronics,Tai nghe,73.40,66,83,830,6
+2026-10,45,ab4f155f-4199-5954-ba66-863eab23e6b7,Máy hút bụi sale sốc A1,NoBrand,Consumer Electronics,Máy hút bụi,74.60,57,82,820,7
+2026-10,46,5accecad-3ecd-5ac7-8119-5461c7dd7ac7,Laptop giá rẻ B2,NoBrand,Computer & Accessories,Laptop,813.00,813,813,813,1
+2026-10,47,05828729-a939-5380-bd3a-63ecd9fd067b,Samsung Máy hút bụi 2026,Samsung,Consumer Electronics,Máy hút bụi,405.00,405,405,810,1
+2026-10,48,52795be1-125e-5b4c-8397-1289bb159d8f,Nagakawa Nồi chiên không dầu Pro,Nagakawa,Consumer Electronics,Nồi chiên không dầu,109.86,97,115,805,3
+2026-10,49,0d6c8524-ec1a-5e01-9925-87ec952c9318,Máy lọc nước sale sốc XL,NoBrand,Home Appliances,Máy lọc nước,91.86,80,112,784,5
+2026-10,50,2f2ec56d-77ea-5a2d-a26a-71b4fe866dce,Máy hút bụi chính hãng M,LG,Home Appliances,Máy hút bụi,383.00,383,383,766,2
+2026-10,51,be1c4197-d968-51cb-890c-6a2ad6560c88,Điều hòa giá rẻ L,Tefal,Home Appliances,Điều hòa,322.00,307,337,766,2
+2026-10,52,d8f9ddcd-26f8-5a61-8629-4d34d4edb915,Máy in sale sốc 01,Samsung,Computer & Accessories,Máy in,122.33,113,127,762,4
+2026-10,53,19477d1e-92e0-5457-90fb-ccfc10cc6eaa,Flycam cao cấp L,NoBrand,Cameras,Flycam,381.00,381,381,762,1
+2026-10,54,28046bd8-9874-545d-a32b-9525d6dffd39,Quạt điện hàng loại 1 03,SoundMax,Consumer Electronics,Quạt,36.45,26,38,760,11
+2026-10,55,2e8d6aa4-8ee8-5308-9dc1-e18bc6ad872e,Bàn ủi hơi nước giá rẻ 03,NoBrand,Consumer Electronics,Bàn ủi,51.43,44,54,756,9
+2026-10,56,b3be0457-0e4e-594d-a2a1-039c7f947bc9,Nồi cơm điện sale sốc XL,NoBrand,Home Appliances,Nồi cơm điện,85.57,79,108,756,5
+2026-10,57,29e3de1b-e192-5109-a997-a5a1b9b127c6,Tefal Tủ lạnh 2026,Tefal,Home Appliances,Tủ lạnh,374.00,374,374,748,1
+2026-10,58,ee00ca44-8540-5afb-b063-15b46d74a0d1,Tai nghe chụp tai chính hãng B2,TCL,Consumer Electronics,Tai nghe,47.33,35,49,735,8
+2026-10,59,bfec502d-eb71-5aae-a41d-130341b4b035,Senaro Đồng hồ nữ Classic,Senaro,Watches,Đồng hồ nữ,241.00,241,241,723,1
+2026-10,60,c764534b-2159-50f3-ba25-13465c6e0dae,Smart TV chính hãng 02,NoBrand,Consumer Electronics,TV,719.00,719,719,719,1
+2026-10,61,a616b7a9-91c7-556e-a879-7ebb6ac24a8d,Logitech Máy hút bụi Mini,Logitech,Consumer Electronics,Máy hút bụi,83.63,77,89,712,6
+2026-10,62,fc3f058d-720e-5ddb-8921-616b04c5211a,Máy hút bụi chính hãng 02,Philips,Home Appliances,Máy hút bụi,99.00,99,99,693,5
+2026-10,63,41864146-1716-52cc-9de1-b882f9b368cf,vivo Điện thoại Mini,vivo,Mobile & Gadgets,Điện thoại,229.00,229,229,687,1
+2026-10,64,0e358aac-e247-51b5-a2cd-d49cd0def073,Canifa Áo lót nữ Edition,Canifa,Women Clothes,Đồ lót,16.78,13,19,684,24
+2026-10,65,6e94971d-f2e9-507a-90df-f9ed4a05b4d9,Logitech Smart TV Basic,Logitech,Consumer Electronics,TV,682.00,682,682,682,1
+2026-10,66,55be2eac-9ad0-58ef-8ba6-31d650954c9c,Senaro Đồng hồ nữ Max,Senaro,Watches,Đồng hồ nữ,130.50,118,168,672,2
+2026-10,67,9763628b-663b-566e-8815-09a223804d24,Smart TV giá rẻ B2,Sony,Consumer Electronics,TV,216.00,216,216,648,1
+2026-10,68,e4db0e39-4f4b-5c82-a5c5-df100f986ceb,Quạt điện freeship 02,NoBrand,Consumer Electronics,Quạt,78.50,68,80,640,4
+2026-10,69,9fb4d0c5-f328-5c00-bdfc-dbdde31d4828,Loa bluetooth cao cấp L,NoBrand,Consumer Electronics,Loa,46.85,35,49,637,5
+2026-10,70,2516d6b3-8827-5ea2-988c-959917d42d2b,Giày chạy bộ freeship 03,NoBrand,Sport & Outdoor,Giày thể thao,82.29,69,90,630,4
+2026-10,71,2ff568d4-ba04-5336-9ff0-d0ee829418ef,Màn hình máy tính freeship XL,NoBrand,Computer & Accessories,Màn hình,131.25,111,138,628,2
+2026-10,72,a9370770-4805-5265-bcba-9d091a46470e,Tefal Bếp từ Pro,Tefal,Home Appliances,Bếp & dụng cụ nấu,116.20,91,125,625,4
+2026-10,73,83364372-478f-57b2-a301-54e4b44ae3d8,Đầm nữ cao cấp 02,Elise,Women Clothes,Váy & đầm,48.75,39,52,624,9
+2026-10,74,979f870d-6426-5f4b-9e62-08d0d10e63cb,Samsung Tai nghe chụp tai Edition,Samsung,Consumer Electronics,Tai nghe,75.38,71,78,624,5
+2026-10,75,f323cfc8-95a4-509e-8cee-126d8cf9d602,Tefal Máy hút bụi Basic,Tefal,Home Appliances,Máy hút bụi,106.20,99,117,620,2
+2026-10,76,3fb7a65d-5f89-5c51-ad15-0e36405a6eb3,Tai nghe chụp tai sale sốc L,NoBrand,Consumer Electronics,Tai nghe,42.71,38,44,616,7
+2026-10,77,41680011-44e6-5340-81a0-bc289be1990d,Nồi chiên không dầu hàng loại 1 A1,NoBrand,Consumer Electronics,Nồi chiên không dầu,117.60,100,122,610,4
+2026-10,78,af9d47eb-5128-50f6-bad6-06394b50038b,Logitech Loa bluetooth Max,Logitech,Consumer Electronics,Loa,19.52,15,21,609,24
+2026-10,79,c4b54a85-2da5-589d-bfbc-55c726344396,Tefal Máy giặt Basic,Tefal,Home Appliances,Máy giặt,564.00,564,564,603,1
+2026-10,80,abeb64b3-2caa-5aba-a7d8-a3216f2e8613,Máy xay sinh tố giá rẻ 02,NoBrand,Home Appliances,Máy xay & ép,63.22,47,67,603,5
+2026-10,81,68a63ca0-c75b-5493-a759-3e8a96ff9a20,Logitech Bàn ủi hơi nước Mini,Logitech,Consumer Electronics,Bàn ủi,39.79,30,43,602,11
+2026-10,82,d78b5bee-e447-5b88-aeda-1e311b622e7f,Sunfly Áo khoác nữ Plus,Sunfly,Women Clothes,Áo khoác,30.00,24,35,595,10
+2026-10,83,d8c00af9-401d-554d-bc83-b5e857890162,Bếp từ sale sốc 01,NoBrand,Home Appliances,Bếp & dụng cụ nấu,29.17,23,33,594,9
+2026-10,84,eb80101e-a6d5-5c04-8a36-6f2a88991600,Bàn ủi hơi nước hàng loại 1 02,NoBrand,Consumer Electronics,Bàn ủi,43.36,38,54,594,8
+2026-10,85,aafc7fdc-13dc-54cb-947f-24c03ab40cbe,Quạt điện giá rẻ XL,Tefal,Consumer Electronics,Quạt,28.16,22,31,589,13
+2026-10,86,788f46fe-6c35-57bb-8c87-379c8ba34a33,Nồi cơm điện giá rẻ XL,NoBrand,Home Appliances,Nồi cơm điện,39.85,32,44,572,9
+2026-10,87,3c61a097-5318-5304-96eb-c9f96ce58d80,Đầm nữ chính hãng L,NoBrand,Women Clothes,Váy & đầm,16.23,13,19,570,20
+2026-10,88,c6c7e05e-576c-58fb-8b1f-98781023dcf0,Logitech Nồi chiên không dầu 2026,Logitech,Consumer Electronics,Nồi chiên không dầu,45.91,39,51,561,6
+2026-10,89,682cd04d-9ce6-5f74-8d43-ef1d6bd085c6,Logitech Bàn ủi hơi nước Plus,Logitech,Consumer Electronics,Bàn ủi,26.50,21,28,560,13
+2026-10,90,59079d3b-a1a1-5006-9a2a-bacf55379a57,Quạt điện freeship B2,Bose,Consumer Electronics,Quạt,38.46,32,43,559,7
+2026-10,91,7f1e958a-175f-5603-b8e7-acd35ea9226e,Loa bluetooth freeship L,NoBrand,Consumer Electronics,Loa,91.83,86,93,558,4
+2026-10,92,764adb59-2576-5484-b1b4-d30879ee04d1,Walfos Bộ chăn ga gối Mini,Walfos,Home Living,Chăn ga gối,28.83,24,31,558,9
+2026-10,93,eb077f29-d421-5412-807b-2679371e9487,Nồi cơm điện giá rẻ L,NoBrand,Home Appliances,Nồi cơm điện,138.00,138,138,552,3
+2026-10,94,06c37247-5ec9-5b99-ad40-461ce2dee763,Canifa Đồ ngủ nữ Edition,Canifa,Women Clothes,Đồ ngủ,22.13,17,24,552,14
+2026-10,95,978f362b-6046-5aeb-ab96-e99f2ad4ec55,Quần nữ cao cấp B2,NoBrand,Women Clothes,Quần,9.96,8,11,550,35
+2026-10,96,048d870a-b5da-5392-b98c-d3867c0692bb,Nồi chiên không dầu freeship 03,NoBrand,Consumer Electronics,Nồi chiên không dầu,39.00,30,42,546,10
+2026-10,97,24dfb721-6772-534d-9375-9c3d1e2dbea9,Deli Laptop Edition,Deli,Computer & Accessories,Laptop,533.00,533,533,533,1
+2026-10,98,4eb8a288-4bb2-510d-978a-835a1f5f968b,Deli Bàn phím cơ Max,Deli,Computer & Accessories,Bàn phím,100.60,83,105,525,5
+2026-10,99,a5b7a2a9-0caf-5d2d-9fcf-57d0a70e5444,Màn hình máy tính hàng loại 1 01,LG,Computer & Accessories,Màn hình,164.00,164,164,522,1
+2026-10,100,dfd15b01-6e75-59ef-99fc-52d6934c6d8f,Smart TV cao cấp 03,JBL,Consumer Electronics,TV,261.00,261,261,522,1

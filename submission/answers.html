@@ -1,0 +1,266 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Case S vs X: answers</title>
+<style>
+ @page { size: A4; margin: 16mm 15mm; }
+ body { font-family: Arial, Helvetica, sans-serif; font-size: 10.5pt; color: #111; line-height: 1.35; }
+ h1 { font-size: 18pt; margin: 0 0 4px; }
+ h2 { font-size: 13.5pt; margin: 18px 0 6px; border-bottom: 1.5px solid #222; padding-bottom: 2px; }
+ h3 { font-size: 11pt; margin: 12px 0 4px; }
+ p { margin: 4px 0 6px; }
+ table { border-collapse: collapse; width: 100%; margin: 4px 0 8px; font-size: 9.2pt; }
+ th, td { border: 1px solid #999; padding: 3px 5px; vertical-align: top; text-align: left; }
+ th { background: #efefef; }
+ td.n, th.n { text-align: right; }
+ pre { page-break-inside: avoid; font-family: Menlo, Consolas, monospace; font-size: 7.7pt; background: #f6f6f6; border: 1px solid #ddd; padding: 6px 8px; white-space: pre-wrap; margin: 4px 0 8px; line-height: 1.25; }
+ code { font-family: Menlo, Consolas, monospace; font-size: 9pt; }
+ .meta { color: #444; font-size: 9.5pt; }
+ .box { border: 1px solid #bbb; background: #fafafa; padding: 6px 9px; margin: 6px 0 8px; }
+ .pb { page-break-before: always; }
+ ul { margin: 2px 0 6px 18px; padding: 0; } li { margin: 1px 0; }
+ .small { font-size: 9pt; color: #333; }
+</style></head><body>
+
+<h1>Market Intelligence case: Company S vs Company X</h1>
+<p class="meta">Candidate: Le Hong Hanh (April) &nbsp;|&nbsp; Role: Senior Market Intelligence Analyst &nbsp;|&nbsp; Submitted: 8 Nov 2026</p>
+<div class="box">
+<b>Editable files</b> (for the live session)<br>
+GitHub repo (SQL, results, mock database, Q4 note): <code>https://github.com/hanh-le-hong/market-intelligence-case</code><br>
+Q5 model (Google Sheets, 9 tabs): <code>https://docs.google.com/spreadsheets/d/1LgIXNfAwEwsVd1FwZXyYwN49rmuzRnWOJmo0zYuTAfQ</code><br>
+Q4 note (Google Docs): <code>https://docs.google.com/document/d/1weGjmNjq-L1TKyGHXxeGyTWV5MOia0XOcUD4bwYUfFU</code>
+</div>
+
+<h3>How the SQL part was done</h3>
+<p>No data was provided, so I built a mock PostgreSQL database that follows the schema and Appendix A exactly (10 tables, 100 S shops, 100 X shops, 60 dual pairs, 2,500 products, 37,479 orders, months 2026-07 to 2026-10), then audited it against Appendix A (18 checks, file <code>sql/00b_audit_vs_appendix.sql</code>) before writing the queries. The mock data contain deliberate edge cases (a shop that becomes dual mid-period, a missing crawl month, shop-months where crawler and market research disagree) so the queries are tested against them. All queries run as-is on that database; the result files in <code>results/</code> are their output. Dialect: PostgreSQL. T-SQL differences are noted in the files.</p>
+
+<h3>Assumptions shared by Q1 to Q3</h3>
+<ul>
+<li><b>Last 3 months</b> = the three latest months in the data: 2026-08, 2026-09, 2026-10. Hard-coded for readability; a dynamic version is noted in the files.</li>
+<li><b>Sold</b> = <code>order_status = 'complete'</code>. Created / paid / on_delivery are not final; canceled / returned are not sales. X crawler GMV also cannot contain canceled orders, so this keeps S and X comparable.</li>
+<li><b>GMV</b> as defined in Appendix A: before discount and shipping deduction (<code>item_gmv</code>, <code>gmv</code>). All values in USD.</li>
+<li><b>Days</b> for ADG / ADO = calendar days of the month (31 / 30 / 31), not days with sales. <b>ABS</b> = GMV / orders. Tier bounds: lower inclusive, upper exclusive.</li>
+<li>Top-N uses <code>ROW_NUMBER()</code>, so exactly N rows per month; ties at the cut-off are broken arbitrarily.</li>
+</ul>
+
+<h2>A1. Top 100 selling items each month (by GMV), company S</h2>
+<p><b>Business question:</b> which products carry S's GMV each month, at what price, and how many orders.</p>
+<p><b>Specific assumptions.</b> Item = <code>s_product_id</code>; details from <code>dim_s_product</code> (name, brand, category lv1/lv2). Average selling price = quantity-weighted average of <code>discounted_price</code> (what the buyer paid), not the listing price; min / max = min / max of <code>discounted_price</code>. order_count = <code>COUNT(DISTINCT order_id)</code> because a product can appear on more than one item row of the same order.</p>
+<p><b>Template</b> (one row = one product in one month; 300 rows). First rows of the actual result:</p>
+<table>
+<tr><th>order_month</th><th class="n">rank</th><th>s_product_id</th><th>brand</th><th>category_lv1</th><th class="n">avg_price</th><th class="n">min</th><th class="n">max</th><th class="n">gmv</th><th class="n">orders</th></tr>
+<tr><td>2026-08</td><td class="n">1</td><td>fc89c75a-…</td><td>NoBrand</td><td>Home Appliances</td><td class="n">450.00</td><td class="n">360</td><td class="n">468</td><td class="n">2,808</td><td class="n">4</td></tr>
+<tr><td>2026-08</td><td class="n">2</td><td>f8be6b87-…</td><td>NoBrand</td><td>Home Appliances</td><td class="n">349.50</td><td class="n">345</td><td class="n">354</td><td class="n">2,262</td><td class="n">2</td></tr>
+<tr><td>2026-08</td><td class="n">3</td><td>63c8c029-…</td><td>NoBrand</td><td>Home Appliances</td><td class="n">215.57</td><td class="n">196</td><td class="n">258</td><td class="n">1,806</td><td class="n">5</td></tr>
+<tr><td colspan="10" class="small">Columns in the file: order_month, rank_in_month, s_product_id, product_name, brand, category_lv1, category_lv2, avg_price, min_price, max_price, gmv, order_count. Full result: <code>results/q1_result.csv</code>.</td></tr>
+</table>
+<p><b>Query</b> (<code>sql/02_q1_top100_items.sql</code>):</p>
+<pre>WITH item_month AS (
+    SELECT i.order_month, i.s_product_id, p.product_name, p.brand, p.category_lv1, p.category_lv2,
+           SUM(i.item_gmv)                                                           AS gmv,
+           COUNT(DISTINCT i.order_id)                                                AS order_count,
+           ROUND(SUM(i.discounted_price * i.quantity)::numeric / SUM(i.quantity), 2) AS avg_price,
+           MIN(i.discounted_price)                                                   AS min_price,
+           MAX(i.discounted_price)                                                   AS max_price
+    FROM fact_s_order_item AS i
+    JOIN fact_s_order   AS o ON o.order_id     = i.order_id
+    JOIN dim_s_product  AS p ON p.s_product_id = i.s_product_id
+    WHERE o.order_status = 'complete'
+      AND i.order_month IN ('2026-08', '2026-09', '2026-10')
+    GROUP BY i.order_month, i.s_product_id, p.product_name, p.brand, p.category_lv1, p.category_lv2
+),
+ranked AS (
+    SELECT *, ROW_NUMBER() OVER (PARTITION BY order_month ORDER BY gmv DESC) AS rank_in_month
+    FROM item_month
+)
+SELECT order_month, rank_in_month, s_product_id, product_name, brand, category_lv1, category_lv2,
+       avg_price, min_price, max_price, gmv, order_count
+FROM ranked
+WHERE rank_in_month <= 100
+ORDER BY order_month, rank_in_month;</pre>
+<p class="small">Why two CTEs: a window function cannot sit in WHERE, so the rank is computed first and filtered in the next step. T-SQL: identical; replace <code>::numeric</code> with <code>CAST(... AS decimal)</code>.</p>
+
+<h2>A2. Top 20 dual shops in S each month, with ADG / ADO / ABS / ABS tier</h2>
+<p><b>Business question:</b> among sellers already on both platforms, who are S's biggest 20 each month and what does their basket look like.</p>
+<p><b>Specific assumptions.</b> Dual = the S shop has a row in <code>fact_s_x_monthly_shop_mapping</code> for <i>that month</i> (the mapping is monthly, so dual status is evaluated per month: a shop can be dual in Sep and not in Aug). GMV and order count come from <code>fact_s_order</code> (one row per order). <code>x_shop_id</code> is carried from the mapping so Q3 can join X data directly.</p>
+<p><b>Template</b> (one row = one dual S shop in one month; 60 rows). Sample rows:</p>
+<table>
+<tr><th>order_month</th><th class="n">rank</th><th>shop_name</th><th>seller_type</th><th class="n">days</th><th class="n">gmv</th><th class="n">orders</th><th class="n">adg</th><th class="n">ado</th><th class="n">abs</th><th>abs_tier</th></tr>
+<tr><td>2026-08</td><td class="n">1</td><td>Nam Zone 54</td><td>Non-mall</td><td class="n">31</td><td class="n">19,975</td><td class="n">58</td><td class="n">644.35</td><td class="n">1.87</td><td class="n">344.40</td><td>over 50 USD</td></tr>
+<tr><td>2026-08</td><td class="n">2</td><td>Tefal Official Store</td><td>Mall</td><td class="n">31</td><td class="n">13,451</td><td class="n">58</td><td class="n">433.90</td><td class="n">1.87</td><td class="n">231.91</td><td>over 50 USD</td></tr>
+<tr><td>2026-08</td><td class="n">5</td><td>men_tuấn547</td><td>Non-mall</td><td class="n">31</td><td class="n">8,437</td><td class="n">290</td><td class="n">272.16</td><td class="n">9.35</td><td class="n">29.09</td><td>10 - 50 USD</td></tr>
+<tr><td>2026-09</td><td class="n">11</td><td>Walfos Official Store</td><td>Mall</td><td class="n">30</td><td class="n">5,339</td><td class="n">280</td><td class="n">177.97</td><td class="n">9.33</td><td class="n">19.07</td><td>10 - 50 USD</td></tr>
+<tr><td colspan="11" class="small">Columns in the file: order_month, rank_in_month, s_shop_id, shop_name, seller_type, x_shop_id, days_in_month, gmv, order_count, adg, ado, abs, abs_tier. Full result: <code>results/q2_result.csv</code>.</td></tr>
+</table>
+<p><b>Query</b> (<code>sql/03_q2_top20_dual_shops.sql</code>):</p>
+<pre>WITH shop_month AS (                      -- S performance per (shop, month), dual shops only
+    SELECT o.order_month, o.s_shop_id, m.x_shop_id,
+           SUM(o.gmv) AS gmv, COUNT(*) AS order_count
+    FROM fact_s_order AS o
+    JOIN fact_s_x_monthly_shop_mapping AS m
+      ON  m.s_shop_id     = o.s_shop_id
+      AND m.mapping_month = o.order_month   -- dual status is per month
+    WHERE o.order_status = 'complete'
+      AND o.order_month IN ('2026-08', '2026-09', '2026-10')
+    GROUP BY o.order_month, o.s_shop_id, m.x_shop_id
+),
+metrics AS (
+    SELECT sm.*,
+           EXTRACT(DAY FROM (TO_DATE(sm.order_month || '-01', 'YYYY-MM-DD')
+                             + INTERVAL '1 month' - INTERVAL '1 day'))::int AS days_in_month,
+           ROUND(sm.gmv::numeric / sm.order_count, 2)                      AS abs
+    FROM shop_month AS sm
+),
+ranked AS (
+    SELECT mt.*, ROW_NUMBER() OVER (PARTITION BY mt.order_month ORDER BY mt.gmv DESC) AS rank_in_month
+    FROM metrics AS mt
+)
+SELECT r.order_month, r.rank_in_month, r.s_shop_id, s.shop_name, s.seller_type, r.x_shop_id,
+       r.days_in_month, r.gmv, r.order_count,
+       ROUND(r.gmv::numeric         / r.days_in_month, 2) AS adg,
+       ROUND(r.order_count::numeric / r.days_in_month, 2) AS ado,
+       r.abs,
+       CASE WHEN r.abs < 5  THEN 'under 5 USD'
+            WHEN r.abs < 10 THEN '5 - 10 USD'
+            WHEN r.abs < 50 THEN '10 - 50 USD'
+            ELSE                 'over 50 USD' END AS abs_tier
+FROM ranked AS r
+JOIN dim_s_shop AS s ON s.s_shop_id = r.s_shop_id
+WHERE r.rank_in_month <= 20
+ORDER BY r.order_month, r.rank_in_month;</pre>
+<p class="small">T-SQL: days_in_month = <code>DAY(EOMONTH(CAST(order_month + '-01' AS date)))</code>. Checks run: 20 rows per month; days = 31/30/31; abs × orders ≈ gmv; a shop that is dual only from September does not appear in August.</p>
+
+<h2>A3. Extend A2 with X shop performance (crawled_fact_x_shop)</h2>
+<p><b>Business question:</b> for S's top 20 dual sellers, how does the same seller perform on X in the same month, side by side.</p>
+<p><b>Specific assumptions.</b> X row matched on <code>x_shop_id</code> (from the monthly mapping) and <code>crawled_month = order_month</code>. <b>LEFT JOIN</b>: a top-20 S shop stays in the list even when the crawler has no row that month; X metrics are NULL and tier = 'no X data'. Dropping it would silently change the top 20 and hide a data gap. X metrics are crawler estimates: gaps under ~10-15% vs S should not be read as real differences. Same formulas and tier thresholds on both sides. <code>gmv_ratio_x_vs_s</code> added as a convenience (&gt; 1 = seller sells more on X).</p>
+<p><b>Template</b> (one row = one dual S shop in one month; 60 rows, same keys as A2):</p>
+<table>
+<tr><th>month</th><th class="n">rank</th><th>S shop</th><th>X shop</th><th class="n">s_gmv</th><th class="n">s_adg</th><th class="n">s_ado</th><th class="n">s_abs</th><th>s_tier</th><th class="n">x_gmv</th><th class="n">x_adg</th><th class="n">x_ado</th><th class="n">x_abs</th><th>x_tier</th><th class="n">X/S</th></tr>
+<tr><td>2026-08</td><td class="n">1</td><td>Nam Zone 54</td><td>MaiShop.vn</td><td class="n">19,975</td><td class="n">644.35</td><td class="n">1.87</td><td class="n">344.40</td><td>over 50</td><td class="n">17,100</td><td class="n">551.61</td><td class="n">1.26</td><td class="n">438.46</td><td>over 50</td><td class="n">0.86</td></tr>
+<tr><td>2026-08</td><td class="n">2</td><td>Tefal Official Store</td><td>Tefal Flagship</td><td class="n">13,451</td><td class="n">433.90</td><td class="n">1.87</td><td class="n">231.91</td><td>over 50</td><td class="n">21,456</td><td class="n">692.13</td><td class="n">2.65</td><td class="n">261.66</td><td>over 50</td><td class="n">1.60</td></tr>
+<tr><td colspan="15" class="small">Columns in the file: order_month, rank_in_month, s_shop_id, shop_name, seller_type, x_shop_id, x_shop_name, days_in_month, s_gmv, s_order_count, s_adg, s_ado, s_abs, s_abs_tier, x_gmv, x_order_count, x_adg, x_ado, x_abs, x_abs_tier, gmv_ratio_x_vs_s. Full result: <code>results/q3_result.csv</code>.</td></tr>
+</table>
+<p><b>Query</b> (<code>sql/04_q3_s_vs_x_performance.sql</code>):</p>
+<pre>WITH shop_month AS (                      -- same as A2
+    SELECT o.order_month, o.s_shop_id, m.x_shop_id,
+           SUM(o.gmv) AS s_gmv, COUNT(*) AS s_order_count
+    FROM fact_s_order AS o
+    JOIN fact_s_x_monthly_shop_mapping AS m
+      ON m.s_shop_id = o.s_shop_id AND m.mapping_month = o.order_month
+    WHERE o.order_status = 'complete'
+      AND o.order_month IN ('2026-08', '2026-09', '2026-10')
+    GROUP BY o.order_month, o.s_shop_id, m.x_shop_id
+),
+ranked AS (
+    SELECT sm.*,
+           EXTRACT(DAY FROM (TO_DATE(sm.order_month || '-01', 'YYYY-MM-DD')
+                             + INTERVAL '1 month' - INTERVAL '1 day'))::int AS days_in_month,
+           ROW_NUMBER() OVER (PARTITION BY sm.order_month ORDER BY sm.s_gmv DESC) AS rank_in_month
+    FROM shop_month AS sm
+),
+top20 AS (SELECT * FROM ranked WHERE rank_in_month <= 20),
+joined AS (                               -- new in A3: X performance for the same shop-month
+    SELECT t.*, x.estimated_gmv AS x_gmv, x.estimated_order_count AS x_order_count
+    FROM top20 AS t
+    LEFT JOIN crawled_fact_x_shop AS x
+      ON x.x_shop_id = t.x_shop_id AND x.crawled_month = t.order_month
+)
+SELECT j.order_month, j.rank_in_month, j.s_shop_id, s.shop_name, s.seller_type,
+       j.x_shop_id, xd.shop_name AS x_shop_name, j.days_in_month,
+       j.s_gmv, j.s_order_count,
+       ROUND(j.s_gmv::numeric         / j.days_in_month, 2)  AS s_adg,
+       ROUND(j.s_order_count::numeric / j.days_in_month, 2)  AS s_ado,
+       ROUND(j.s_gmv::numeric         / j.s_order_count, 2)  AS s_abs,
+       CASE WHEN j.s_gmv::numeric / j.s_order_count < 5  THEN 'under 5 USD'
+            WHEN j.s_gmv::numeric / j.s_order_count < 10 THEN '5 - 10 USD'
+            WHEN j.s_gmv::numeric / j.s_order_count < 50 THEN '10 - 50 USD'
+            ELSE 'over 50 USD' END                           AS s_abs_tier,
+       j.x_gmv, j.x_order_count,
+       ROUND(j.x_gmv::numeric         / j.days_in_month, 2)  AS x_adg,
+       ROUND(j.x_order_count::numeric / j.days_in_month, 2)  AS x_ado,
+       ROUND(j.x_gmv::numeric / NULLIF(j.x_order_count, 0), 2) AS x_abs,
+       CASE WHEN j.x_gmv IS NULL OR j.x_order_count IS NULL OR j.x_order_count = 0 THEN 'no X data'
+            WHEN j.x_gmv::numeric / j.x_order_count < 5  THEN 'under 5 USD'
+            WHEN j.x_gmv::numeric / j.x_order_count < 10 THEN '5 - 10 USD'
+            WHEN j.x_gmv::numeric / j.x_order_count < 50 THEN '10 - 50 USD'
+            ELSE 'over 50 USD' END                           AS x_abs_tier,
+       ROUND(j.x_gmv::numeric / NULLIF(j.s_gmv, 0), 2)       AS gmv_ratio_x_vs_s
+FROM joined AS j
+JOIN dim_s_shop AS s        ON s.s_shop_id  = j.s_shop_id
+LEFT JOIN crawled_dim_x_shop AS xd ON xd.x_shop_id = j.x_shop_id
+ORDER BY j.order_month, j.rank_in_month;</pre>
+<p class="small">Checks run: still 60 rows after the LEFT JOIN; one x_shop_id per row (mapping is 1:1 per month); the shop whose crawl is missing in October shows NULL and 'no X data'; s_abs_tier equals A2's abs_tier for the same shop-month.</p>
+
+<h2>A4. Detecting and reconciling crawler vs market research disagreement on X GMV</h2>
+<p>Two estimates of the same thing (X shop GMV per month): the crawler infers GMV from public "sold" counters and prices (granular, timing-sensitive, starred as primary); the vendor model is aggregated and can lag. Neither is ground truth. The goal is not "the right number" but a rule, per shop-month, for which number to use and how much to trust it.</p>
+<h3>Detection criteria, in this order</h3>
+<table>
+<tr><th style="width:4%">#</th><th style="width:16%">Criterion</th><th style="width:40%">Rule</th><th>Rationale</th></tr>
+<tr><td>C1</td><td>Coverage</td><td>Shop-month exists in only one source → <code>single_source</code>. Not a disagreement; cannot be reconciled.</td><td>You cannot compare what you do not have. Separate first or it pollutes the gap statistics (50 of 399 crawler rows in the mock data have no MR row).</td></tr>
+<tr><td>C2</td><td>Relative gap</td><td>gap = |MR − crawler| / max(MR, crawler). &lt;10% <code>consistent</code>; 10-25% <code>watch</code>; ≥25% <code>conflict</code>.</td><td>Both sources carry ~10% error each; two errors combine to ~20%, so below 25% is noise. max() in the denominator keeps the gap symmetric whichever side is bigger.</td></tr>
+<tr><td>C3</td><td>Materiality floor</td><td>Apply C2 only when max(MR, crawler) ≥ USD 500 / month; else <code>immaterial</code>.</td><td>A 60% gap on a USD 100 shop is a USD 60 problem. Keeps the review list short and actionable. Threshold is a parameter.</td></tr>
+<tr><td>C4</td><td>Persistence</td><td><code>conflict</code> in ≥2 consecutive months → <code>systematic</code>; otherwise <code>one_off</code>.</td><td>One bad month is a crawl hiccup; repeated conflict means a source is structurally wrong for that shop (wrong mapping, vendor model). Different fix, so different flag.</td></tr>
+<tr><td>C5</td><td>Global bias / drift</td><td>Monthly mean and spread of (MR − crawler)/crawler across consistent shops; mean beyond ±5% or spread jumping → <code>source_drift</code>.</td><td>If every shop moves the same way, a source changed, not the shops. Detected at population level.</td></tr>
+<tr><td>C6</td><td>Internal plausibility</td><td>Per source: implied ABS outside the shop's category price band; orders = 0 with GMV &gt; 0; GMV jump &gt; 3× vs the same source's prior month → <code>implausible_&lt;source&gt;</code>.</td><td>A gap says <i>that</i> they differ, not <i>which</i> is wrong. Internal checks give a verdict on each source alone.</td></tr>
+<tr><td>C7</td><td>S-side triangulation (dual shops)</td><td>Compare both X numbers with the same seller's S profile (GMV, ABS, orders). The source closer to S is more credible.</td><td>Same seller, same products, same prices; S data are real transactions. Available for the ~60% of shops the business team cares about.</td></tr>
+</table>
+<h3>Reconciliation: which number to use</h3>
+<p>Never average blindly: averaging a good and a broken estimate yields a wrong number that looks reasonable. Pick one source per shop-month by rule and record the choice.</p>
+<table>
+<tr><th>Flags</th><th>Use</th><th>Confidence</th><th>Why</th></tr>
+<tr><td>consistent / watch</td><td>Crawler (keep MR as reference)</td><td>High / Medium</td><td>Agree within noise; crawler is primary and more granular</td></tr>
+<tr><td>conflict + implausible_crawler</td><td>MR</td><td>Medium</td><td>Crawler row is internally broken that month</td></tr>
+<tr><td>conflict + implausible_mr</td><td>Crawler</td><td>Medium</td><td>Vendor model is off for that shop</td></tr>
+<tr><td>conflict, MR ≈ crawler of previous month</td><td>Crawler</td><td>Medium</td><td>Vendor lag (Appendix A: "possible lag vs real performance")</td></tr>
+<tr><td>conflict, both plausible, dual shop</td><td>Source closer to S profile (C7)</td><td>Medium</td><td>Triangulate with real data</td></tr>
+<tr><td>conflict, both plausible, non-dual, one_off</td><td>Crawler, flagged</td><td>Low</td><td>Default to primary; exclude from top-N views that month</td></tr>
+<tr><td>conflict + systematic</td><td><b>Neither; escalate</b></td><td>None</td><td>Likely wrong mapping or dead listing; fix upstream, keep out of comparisons</td></tr>
+<tr><td>single_source</td><td>The one available</td><td>Low</td><td>Reported as unverified</td></tr>
+</table>
+<p>Output is one table at shop-month grain: <code>x_shop_id, month, crawler_gmv, mr_gmv, gap_pct, flags, gmv_final, source_used, confidence</code>. Downstream queries (A3, dashboards) read <code>gmv_final</code> and <code>confidence</code>, never the raw sources, so every number traces to a rule. Operating rules: run the day after both sources land; review only <code>conflict</code> and <code>source_drift</code>; calibrate thresholds on 3-6 months of history (if &gt;5% of material shop-months are in conflict, the bar is too tight); every <code>systematic</code> case must produce an upstream fix or it returns next month. On the mock data: 339 consistent, 7 watch, 3 conflict (all 2026-09, MR = 2.2× crawler, none persisting), 50 crawler-only, mean bias +1.7%, no drift. Full note with an illustrative query: <code>q4_reconciliation/</code> and the Google Doc.</p>
+
+<h2 class="pb">B. Projection model for company X: GMV, orders, P&L</h2>
+<p><b>Setup.</b> X is assumed to be TikTok Shop Vietnam (second-largest platform, 41% of 4-platform GMV in 2025 per Metric). Quarterly model, Q1 2025A to Q4 2027E, three scenarios, USD at 26,000 VND/USD, P&L lines (1) to (13) exactly as Appendix B. Market GMV for a projected quarter = same quarter of the prior year × (1 + growth), so 2025 seasonality (Q4 ≈ 29% of the year) carries forward. X GMV = market × X share. Orders = GMV / AOV. Every input is blue, with its source or rationale beside it. The sheet has 9 tabs: README, Assumptions, Model, Scenarios, Findings, Sources, plus an extra S model and an S vs X comparison (not asked; added because "second largest" only means something relative to the largest).</p>
+<h3>Key assumptions (Base case; Worst / Best in brackets)</h3>
+<table>
+<tr><th>Input</th><th>Value</th><th>Basis</th></tr>
+<tr><td>Market GMV 2025A (4 platforms)</td><td>USD 16.5bn; Q1-Q4: 3.90 / 3.88 / 3.99 / 4.76</td><td>Metric.vn quarterly reports (VND 429.7tn)</td></tr>
+<tr><td>Market growth 2026 / 2027</td><td>+28% / +22% (20-33% / 15-28%)</td><td>Metric Q1 2026 forecast +32.7%; e-Conomy SEA 2026 +22%, ~17% CAGR to 2030</td></tr>
+<tr><td>X share 2025A by quarter</td><td>35% / 43% / 41% / 45%</td><td>Metric; Q2 and Q4 derived from H1 and FY shares</td></tr>
+<tr><td>X share 2026 / 2027</td><td>45% / 47% (42-48% / 42-52%)</td><td>Exit rate ~45%; best case = overtakes incumbent by 2027 (Q&amp;Me "duopoly")</td></tr>
+<tr><td>AOV</td><td>USD 5.5 in 2025, +3%/yr (0-5%)</td><td>Derived from Metric items sold; Mall mix rising</td></tr>
+<tr><td>Commission (5), blended</td><td>3.5% 2025 → 5-7.5% through 2026 → 7.5%</td><td>VnExpress Mar 2025; Cube Asia take-rate tracker; VN Market Insights</td></tr>
+<tr><td>Transaction fee (3)</td><td>4-5% 2025 → 6% from May 2026</td><td>Cube Asia; VN Market Insights</td></tr>
+<tr><td>Handling fee (4)</td><td>VND 3,000 per delivered order from Q4 2025; 88% delivered</td><td>VN Market Insights</td></tr>
+<tr><td>Ads (6), extra vouchers (8), other (9)</td><td>2.0% GMV; 3-4% fee on 25% enrolled GMV; 0.5%</td><td>Sea Ltd VAS ≈ 2% of GMV; Voucher Xtra terms</td></tr>
+<tr><td>Voucher subsidy (11)+(12)</td><td>9% of GMV 2025 → 7.0% 2026 → 6.2% 2027 (8.5-7.8% / 6.8-5.3%)</td><td>Anchored on Sea Ltd S&amp;M 2.8% of GMV; X in share-acquisition mode spends above</td></tr>
+</table>
+<h3>Key outputs</h3>
+<table>
+<tr><th>Fiscal year</th><th class="n">FY2025A</th><th class="n">FY2026E Base</th><th class="n">FY2027E Worst</th><th class="n">FY2027E Base</th><th class="n">FY2027E Best</th></tr>
+<tr><td>X GMV, USD bn</td><td class="n">6.82</td><td class="n">9.52</td><td class="n">9.6</td><td class="n">12.1</td><td class="n">14.6</td></tr>
+<tr><td>Orders, m</td><td class="n">1,241</td><td class="n">1,680</td><td class="n">1,741</td><td class="n">2,079</td><td class="n">2,412</td></tr>
+<tr><td>(1) Revenue, USD m</td><td class="n">742</td><td class="n">1,656</td><td class="n">1,737</td><td class="n">2,272</td><td class="n">2,833</td></tr>
+<tr><td>Take rate, % GMV</td><td class="n">10.9%</td><td class="n">17.4%</td><td class="n">18.1%</td><td class="n">18.7%</td><td class="n">19.4%</td></tr>
+<tr><td>(10) Voucher cost, USD m</td><td class="n">610</td><td class="n">666</td><td class="n">747</td><td class="n">752</td><td class="n">775</td></tr>
+<tr><td>(13) P&L, USD m</td><td class="n">131</td><td class="n">990</td><td class="n">990</td><td class="n">1,520</td><td class="n">2,058</td></tr>
+<tr><td>P&L margin, % GMV</td><td class="n">1.9%</td><td class="n">10.4%</td><td class="n">10.3%</td><td class="n">12.5%</td><td class="n">14.1%</td></tr>
+</table>
+<h3>Findings</h3>
+<ul>
+<li><b>GMV:</b> USD 6.8bn (FY2025A) to USD 9.6-14.6bn in FY2027E; Base USD 12.1bn, 33% two-year CAGR. The worst-to-best spread (USD 5bn) is ~45% market size and ~55% share, so the share assumption matters more than the market forecast.</li>
+<li><b>Seasonality:</b> Q4 is ~29-32% of the year. Q4 2027E Base = USD 3.5bn in one quarter, more than Q1+Q2 2025 combined. Annual targets that ignore this under-plan Q4 fulfilment and subsidy by about a third.</li>
+<li><b>Orders</b> grow slower than GMV (1.7× vs 1.8×) because AOV rises with Mall mix. Peak ADO 6.5m orders/day in Q4 2027E vs 4.3m in Q4 2025: fulfilment capacity binds before demand.</li>
+<li><b>Take rate</b> is policy-driven, not volume-driven: 8.6% (Q1 2025) to 18.8% (Q4 2026E), +10pp, from three dated fee changes. After that revenue growth is pure volume.</li>
+<li><b>P&L</b> under Appendix B is contribution before fulfilment, payment, headcount and tech. X turns positive from Q2 2025 (after the April 2025 commission rise), FY2025A ~USD 130m (1.9% GMV), FY2027E Base USD 1.5bn (12.5%). A full P&L would be several points lower (Sea Ltd adj. EBITDA 0.7% of GMV).</li>
+<li><b>Most sensitive inputs:</b> subsidy (1pp of GMV = USD 121m in FY2027E; holding 2025 intensity cuts P&L to USD 1.2bn) and commission (40% of FY2027E revenue; a 2pp cut removes ~USD 240m, the size of the whole ads line).</li>
+<li><b>Implication for S's seller acquisition:</b> X's take rate now equals or exceeds S's, so "lower fees on X" no longer holds. S should sell fee stability and lower subsidy dependence to the Mall and high-ABS sellers surfaced in A2/A3, whose margins are hit hardest by a 6% transaction fee, and push before Q4 when X's subsidy budget is most stretched.</li>
+</ul>
+<h3>Extra: S vs X on the same market and scenario (Base case)</h3>
+<table>
+<tr><th>FY</th><th class="n">GMV S / X, USD bn</th><th class="n">X / S</th><th class="n">Orders S / X, m</th><th class="n">Take rate S / X</th><th class="n">Voucher % GMV S / X</th><th class="n">P&L S / X, USD m</th></tr>
+<tr><td>2025A</td><td class="n">9.26 / 6.82</td><td class="n">0.74×</td><td class="n">1,424 / 1,241</td><td class="n">15.0% / 10.9%</td><td class="n">5.1% / 8.9%</td><td class="n">918 / 131</td></tr>
+<tr><td>2027E</td><td class="n">13.16 / 12.13</td><td class="n">0.92×</td><td class="n">1,946 / 2,079</td><td class="n">18.9% / 18.7%</td><td class="n">4.5% / 6.2%</td><td class="n">1,896 / 1,520</td></tr>
+</table>
+<p>X closes the GMV gap but does not pass S in the Base case (only in the Best case, 1.13×, from 2027). X leads on orders from 2026 because its AOV is ~15% lower. By 2027 both charge ~19% of GMV; the remaining P&L gap is subsidy, not fees. S share is derived as 1 − X − others (Lazada, Tiki ≈ 2-3%), so it inherits any error in the X share.</p>
+<h3>Caveats and sources</h3>
+<p class="small">Market figures are third-party estimates (Metric, Q&amp;Me) that differ by ~3 share points for the same period; Metric is used for quarterly alignment. AOV is derived, not disclosed. Fees are blended across categories from published ranges. Subsidy ratios are assumptions anchored on Shopee's marketing-to-GMV benchmark. Treat FY2027 outputs as ranges. Sources (full URLs and access dates on the Sources tab): Metric.vn via VnEconomy (31 Jan 2026) and CafeF (29 Oct 2025); Q&amp;Me via The Investor (3 Jun 2026); e-Conomy SEA 2026 via Vietnam News (6 Nov 2026); Cube Asia TikTok Shop take-rate tracker (Aug 2026); VN Market Insights TikTok Shop fee guide (2026); VnExpress International (17 Mar 2025); Sea Limited FY2025 results (2 Mar 2026); Eimskip Vietnam, Shopee fee schedule (20 Jun 2026).</p>
+</body></html>

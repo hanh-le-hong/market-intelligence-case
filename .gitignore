@@ -1,0 +1,3 @@
+.DS_Store
+*.log
+sql/00_mock_database.sql
